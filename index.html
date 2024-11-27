@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global DeepTech Events Calendar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background Video Styling */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Ensure the video is behind all content */
+        }
+        
+
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .revolutionizing {
+    background: linear-gradient( #03162a, #eecb05); /* Bluish gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold; 
+}
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 31, 63, 0.9));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styling */
+        .features, .how-it-works, .benefits, .success-stories, .upcoming-events, .community, .contact {
+            padding: 60px 20px;
+            background: rgba(0, 31, 63, 0.6); /* Semi-transparent background */
+            color: white;
+            
+        }
+
+        .features h2, .how-it-works h2, .benefits h2, .success-stories h2, .upcoming-events h2, .community h2, .contact h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            animation: slideIn 1.5s;
+        }
+
+        /* List Items */
+        .list-unstyled li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(0, 31, 63, 0.9);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Buttons with Hover Effect */
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem; /* Reduce heading size */
+        }
+
+        .hero p {
+            font-size: 1rem; /* Adjust paragraph size */
+        }
+
+        .hero .btn {
+            font-size: 0.9rem; /* Scale down button size */
+            padding: 8px 15px;
+        }
+
+        .features .row > div {
+            margin-bottom: 20px; /* Add spacing between stacked items */
+        }
+
+        .features h2 {
+            font-size: 2rem; /* Adjust section heading size */
+        }
+
+        .navbar-nav .nav-link {
+            padding: 5px 10px; /* Adjust padding for smaller screens */
+        }
+    }
+      .stunning-style {
+        background: linear-gradient(72deg, rgba(171, 237, 243, 0) 0%, rgba(39, 43, 44, 0.9) 100%);
+        color: white;
+        padding: 80px 30px;
+        border-radius: 15px; /* Rounded corners */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds depth with a shadow */
+        font-family: 'Arial', sans-serif;
+        text-align: center; /* Center the text */
+        letter-spacing: 1px; /* Slight letter spacing for a modern look */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        opacity: 0.75;
+    }
+    
+
+
+.ss {
+   
+    background: linear-gradient(72deg, rgba(171, 237, 243, 0.6) 0%, rgba(39, 43, 44, 0.6) 100%);
+    color: black;
+    padding: 60px 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <video class="video-bg" autoplay muted loop>
+        <source src="1851190-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">DeepTech Events</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ecosystem">Ecosystem</a></li>
+                <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
+                <li class="nav-item"><a class="nav-link" href="#focus">Focus Areas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1><span class="revolutionizing">Revolutionizing</span> How You Explore DeepTech Events</h1>
+        <p>Stay ahead of the curve with the world’s first <strong>decentralized events platform</strong> for the tech visionaries of tomorrow.</p>
+        <button class="btn btn-primary cta-btn">Discover Events Now</button>
+        <button class="btn btn-secondary cta-btn">List Your Event</button>
+    </div>
+</section>
+
+<!-- Key Features Section -->
+<section class="features">
+    <div class="container text-center">
+        <h2>Why Choose Global DeepTech Events Calendar?</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <p>🛡️ <strong>Secure and Reliable</strong>: Powered by blockchain for unbeatable transparency and security.</p>
+            </div>
+            <div class="col-md-4">
+                <p>🔗 <strong>Seamless Connectivity</strong>: Access events across industries in one unified platform.</p>
+            </div>
+            <div class="col-md-4">
+                <p>🔥 <strong>Hot Recommendations</strong>: Get personalized event picks that match your interests.</p>
+            </div>
+            <div class="col-md-4">
+                <p>🌍 <strong>Global Reach</strong>: Wherever you are, find events near you or across the globe.</p>
+            </div>
+            <div class="col-md-4">
+                <p>💡 <strong>Event Innovation</strong>: Smart ticketing, verified listings, and tamper-proof schedules.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works bg-light stunning-style ss " 
+    <div class="container text-center" style="backdrop-filter: blur(5px);">
+
+        <h2>Plan Smarter, Attend Better</h2>
+        <div class="row mt-4">
+            <div class="col-md-3">1️⃣ <strong>Search & Discover</strong>: Browse verified DeepTech events curated from around the world.</div>
+            <div class="col-md-3">2️⃣ <strong>Smart Recommendations</strong>: Let our AI-driven engine pick events tailored to your preferences.</div>
+            <div class="col-md-3">3️⃣ <strong>Secure Booking</strong>: Register with confidence using blockchain-backed smart contracts.</div>
+            <div class="col-md-3">4️⃣ <strong>Stay Updated</strong>: Never miss a beat with real-time notifications for updates and changes.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits">
+    <div class="container text-center">
+        <h2>What’s In It for You?</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h4>Benefits for Users:</h4>
+                <ul class="list-unstyled">
+                    <li>🕒 <strong>Save Time</strong>: Instantly find the best DeepTech events in your area of interest.</li>
+                    <li>📅 <strong>Stay Organized</strong>: Integrate event schedules directly into your calendar.</li>
+                    <li>🤝 <strong>Build Networks</strong>: Meet the brightest minds in technology and innovation.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Benefits for Organizers:</h4>
+                <ul class="list-unstyled">
+                    <li>🚀 <strong>Boost Visibility</strong>: Showcase your event to a global audience.</li>
+                    <li>✅ <strong>Tamper-Proof Listings</strong>: Gain trust with verifiable event information.</li>
+                    <li>🔄 <strong>Streamlined Ticketing</strong>: Manage registrations with ease.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Stories Section -->
+<section class="how-it-works bg-light stunning-style ss" >
+    <div class="container text-center" style="backdrop-filter: blur(5px);">
+
+        <h2>Hear from the Innovators</h2>
+        <blockquote class="blockquote">🗣️ “I’ve connected with groundbreaking researchers and startups through this platform. Truly revolutionary!” — Sophia W.</blockquote>
+        <blockquote class="blockquote">🗣️ “The smart ticketing system saved us time and ensured complete security for our attendees.” — Event Organizer, DeepTech Global Conference</blockquote>
+    </div>
+</section>
+
+<!-- Upcoming Events Section -->
+<section class="upcoming-events">
+    <div class="container text-center">
+        <h2>Don’t Miss These Must-Attend Events</h2>
+        <ul class="list-unstyled">
+            <li>🚀 DeepTech Global Summit — <strong>Dec 15, 2024</strong></li>
+            <li>🌟 AI & Blockchain Future Expo — <strong>Jan 10, 2025</strong></li>
+            <li>🛠️ Innovators Lab Hackathon — <strong>Feb 20, 2025</strong></li>
+        </ul>
+        <button class="btn btn-primary">See All Events</button>
+    </div>
+</section>
+
+<!-- Community Collaboration Section -->
+<section class="how-it-works bg-light stunning-style ss">
+    <div class="container text-center" style="backdrop-filter: blur(5px);">
+
+        <h2>Join the Movement. Power the Future.</h2>
+        <p>Collaborate with fellow innovators. Contribute events and share knowledge. Build the ultimate DeepTech community.</p>
+        <button class="btn btn-primary">Get Started Today!</button>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <div class="container text-center">
+        <h2>Let’s Build the Future Together!</h2>
+        <p>Email: <a href="mailto:contact@deeptechevents.com">contact@deeptechevents.com</a></p>
+        <p>Follow us: Twitter | LinkedIn | GitHub</p>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <p>Empowering Innovators, One Event at a Time.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Features</a></li>
+            <li class="list-inline-item"><a href="#">Events</a></li>
+            <li class="list-inline-item"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
